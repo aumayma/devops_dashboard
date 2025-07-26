@@ -33,3 +33,4 @@ __pycache__/
 
 # Ignorer captures d’écran ou images locales
 Screenshot.png
+prometheus-2.52.0.linux-amd64/
