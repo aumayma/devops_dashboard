@@ -2,10 +2,11 @@ from flask import Flask, render_template,request,redirect,url_for # For flask im
 from bson import ObjectId    # For ObjectId to work
 from pymongo import MongoClient
 import os
-
+from prometheus_flask_exporter import PrometheusMetrics
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 cf_port = os.getenv("PORT")
-
+client = MongoClient("mongodb://localhost:27017/") 
 title = "TODO sample application with Flask and MongoDB"
 heading = "TODO Reminder with Flask and MongoDB"
 
@@ -109,6 +110,7 @@ def search():
 #    app.run()
 if __name__ == '__main__':
    if cf_port is None:
-       app.run(host='0.0.0.0', port=5000, debug=True)
+       app.run(host='0.0.0.0', port=5001, debug=True)
    else:
        app.run(host='0.0.0.0', port=int(cf_port), debug=True)    
+
