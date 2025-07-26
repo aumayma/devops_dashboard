@@ -21,3 +21,15 @@ $RECYCLE.BIN/
 # =========================
 # Operating System Files
 # =========================
+# Ignorer Prometheus téléchargé
+prometheus-2.52.0.linux-amd64/
+prometheus-2.52.0.linux-amd64.tar.gz
+
+# Ignorer fichiers temporaires ou OS
+__pycache__/
+*.pyc
+*.log
+*.DS_Store
+
+# Ignorer captures d’écran ou images locales
+Screenshot.png
