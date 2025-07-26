@@ -4,5 +4,4 @@ pytest
 pytest-cov
 requests
 prometheus-flask-exporter
-bson
 
